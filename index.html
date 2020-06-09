@@ -82,28 +82,28 @@
     <!--[if lt IE 9]>
     <script src='https://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
     <![endif]-->
-    <title>WebXR - Samples</title>
+    <title>Сдача работ по КГ</title>
   </head>
   <body>
 
     <div class='container' id='container'>
       <header class='header'>
         <div id='nav'>
-            <a href='./' class='selected'>Samples</a>
+            <a href='./' class='selected'>Сданные работы</a>
             <!--a href='proposals/'>Proposals</a-->
-            <a href='tests/'>Test Pages</a>
+            
         </div>
 
         <h1>
           <a href='' class='wordmark'>
-            <img src='media/logo/webxr-logo.svg' alt='WebXR Logo'/>
+            <img src='media/logo/iit-colour.svg' alt='Mirea Logo'/>
           </a>
         </h1>
-        <h2 class='tagline'>Sample Pages</h2>
+        <h2 class='tagline'>Примеры выполнения работ</h2>
       </header>
 
       <main class='main' id='main'>
-        <p><b>Does my browser support WebXR?</b><br/>
+        <p><b>Поддерживает ли мой браузер WebXR?</b><br/>
         <div>
           <img id='canhazimg' style='width: 32px; float: left;'></img>
           <p id='canhazwebxr' style='margin-left: 48px;'></p>
@@ -118,107 +118,41 @@
           let canhazElement = document.getElementById('canhazwebxr');
           let canhazImg = document.getElementById('canhazimg');
           if ('xr' in navigator) {
-            canhazElement.innerText = "Yes! Your browser supports WebXR and can run Virtual Reality and Augment Reality experiences if you have the appropriate hardware."
+            canhazElement.innerText = "Да, ваш браузер поддерживает WebXR и позволит вам просмотреть работы выполненные по компьютерной граффике на данном веб-ресурсе"
             canhazImg.src = "media/textures/check-button.png";
           } else if ('getVRDisplays' in navigator) {
-            canhazElement.innerText = "Your browser does not support WebXR, but does support the deprecated WebVR API. You may be able to run Virtual Reality experiences on sites that use the WebXR Polyfill, like this one!"
+            canhazElement.innerText = "Извините, Ваш браузер не поддерживает WebXR"
             canhazImg.src = "media/textures/info-button.png";
           } else if (isMobile(window)) {
-            canhazElement.innerText = "Your browser does not support WebXR, but you appear to be using a mobile device. You may be able to run Virtual Reality experiences on sites that use the WebXR Polyfill, like this one!"
+            canhazElement.innerText = "Ваш мобильный браузер не поддерживает WebXR"
             canhazImg.src = "media/textures/info-button.png";
           } else {
-            canhazElement.innerText = "Sorry, your browser does not support WebXR."
+            canhazElement.innerText = "Извините, но Ваш браузер не поддерживает WebXR"
             canhazImg.src = "media/textures/x-button.png";
           }
         </script>
 
-        <p><b>Sample pages demonstrating how to use various aspects of the WebXR API.</b><br/>
-        <a href="explainer.html">Learn More</a></p>
+        <p><b>Работы выполненные нашими студентами</b><br/>
 
         <script>
           let pages = [
-            { title: 'Immersive VR Session', category: 'Basics',
-              path: 'immersive-vr-session.html',
-              description: 'Demonstrates use of an "immersive-vr" XRSession to present a WebGL scene on an VR headset.' },
-
-            { title: 'Immersive AR Session', category: 'Basics',
+        
+            { title: 'Проект Иванова И.И', category: 'Непрочитанные',
               path: 'immersive-ar-session.html',
-              description: 'Demonstrates use of an "immersive-ar" XRSession to present a WebGL scene on an AR-enabled phone or headset.' },
+              description: 'Прошу проверить мою работу, загрузил ее вам в систему' },
 
-            { title: 'Inline Session', category: 'Basics',
-              path: 'inline-session.html',
-              description: 'Demonstrates use of an "inline" XRSession to present the same WebGL scene on the page and on an XR device.' },
-
-            { tag: 'hr' },
-            { tag: 'br' },
-
-            { title: 'Reduced-Bind Rendering', category: 'Performance',
-              path: 'reduced-bind-rendering.html',
-              description: 'Demonstrates a technique to reduce the number of state changes made while rendering.' },
-
-            { title: 'Room Scale', category: 'Basics',
-              path: 'room-scale.html',
-              description: 'Demonstrates using a "local-floor" reference space to provide room scale tracking.' },
-
-            { title: 'Input Tracking', category: 'Input',
-              path: 'input-tracking.html',
-              description: 'Demonstrates basic tracking and rendering of XRInputSources.'},
-
-            { title: 'Input Profiles', category: 'Input',
-              path: 'input-profiles.html',
-              description: 'Demonstrates loading appropriate controller models based on the XRInputSources profiles array.'},
-
-            { title: 'Input Selection', category: 'Input',
-              path: 'input-selection.html',
-              description: 'Demonstrates handling \'select\' events generated by XRInputSources.'},
-
-            { title: 'Controller State', category: 'Input',
-              path: 'controller-state.html',
-              description: 'Demonstrates responding to controller state from an XRInputSource\'s gamepad attribute.'},
-
-            { title: 'Framebuffer Scaling', category: 'Performance',
-              path: 'framebuffer-scaling.html',
-              description: 'Demonstrates scaling a layer\'s framebuffer to statically control performance or quality.' },
-
-            { title: '360 Stereo Photos', category: 'Content',
+            { title: 'Проект 360 фото Поздняков', category: 'Непрочитанные',
               path: '360-photos.html',
-              description: 'Demonstrates displaying a 360 degree equirectangular stereo photo.' },
+              description: 'Доброго времени суток, доделал свой проект с HDRI картами.' },
 
-            { title: 'Stereo Video', category: 'Content',
+            { title: 'Зуев А.С. вторая практическая', category: 'Непрочитанные',
               path: 'stereo-video.html',
-              description: 'Demonstrates playing stereo videos.' },
+              description: 'Добрый день, вторую лабораторную работу по Компьютерной Графике и Иммерсивным Технологиям  прошу выполнить по примеру' },
 
-            { title: 'Positional Audio', category: 'Content',
-              path: 'positional-audio.html',
-              description: 'Demonstrates playing audio that sounds as if it originates at a specific point in the space.' },
-
-            { title: 'Spectator Mode', category: 'Advanced Techniques',
-              path: 'spectator-mode.html',
-              description: 'Demonstrates rendering a 3rd person view of the scene to an external monitor.' },
-
-            { title: 'Teleportation', category: 'Advanced Techniques',
-              path: 'teleportation.html',
-              description: 'Demonstrates teleporting the viewer around the scene with getOffsetReferenceSpace().'},
-
-            { tag: 'hr' },
-            { tag: 'br' },
-
-            { title: 'Hit Test', category: 'AR Basics',
+  
+            { title: 'Абонян Сергей', category: 'Отложенные',
               path: 'hit-test.html',
-              description: 'Demonstrates using the Hit Test API to place virtual objects on real-world surfaces.'},
-
-            { tag: 'hr' },
-            { tag: 'br' },
-
-            { title: 'Barebones VR', category: 'WIN32_LEAN_AND_MEAN',
-              path: 'vr-barebones.html',
-              description: 'Extremely simple use of "immersive-vr" sessions with no library dependencies. Doesn\'t render anything exciting.',
-              noPolyfill: true },
-
-            { title: 'Barebones AR', category: 'WIN32_LEAN_AND_MEAN',
-              path: 'ar-barebones.html',
-              description: 'Extremely simple use of "immersive-ar" sessions with no library dependencies. Doesn\'t render anything exciting.',
-              noPolyfill: true },
+              description: 'Выполнил третью лабораторную с моделированием объектов окружающщей среды. Оцените пожалуйста'},
           ];
 
           let mainElement = document.getElementById("main");
@@ -257,18 +191,9 @@
             let links = document.createElement('div');
             links.classList.add('links');
 
-            let sourceLink = document.createElement('a');
-            sourceLink.href = 'https://github.com/immersive-web/webxr-samples/blob/master/' + page.path;
-            sourceLink.textContent = 'Source';
-            links.appendChild(sourceLink);
+ 
 
-            if (!page.noPolyfill) {
-              let polyfillLink = document.createElement('a');
-              polyfillLink.href = page.path + '?usePolyfill=0';
-              polyfillLink.textContent = 'Run Without Polyfill';
-              links.appendChild(polyfillLink);
-            }
-
+ 
             article.appendChild(links);
 
             mainElement.appendChild(article);
@@ -276,11 +201,7 @@
         </script>
       </main>
 
-      <p>Models used in these samples come from <a href="https://poly.google.com">Poly</a>, and many were modeled in <a href="https://vr.google.com/blocks/">Blocks</a>.<br/>
-      They a stored and loaded using the <a href="https://www.khronos.org/gltf/">glTF 2.0 format</a>.<br/>
-      Attribution for individual models can be found under the <a href="https://github.com/immersive-web/webxr-samples/tree/master/media/gltf">media/gltf</a> folders for this repository.</p>
-
-      <h3><a class='github-link' href='https://github.com/immersive-web/webxr-samples'>View samples source on GitHub</a></h3>
+ 
 
       <footer class='footer'>
       </footer>
